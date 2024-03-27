@@ -1,0 +1,12 @@
+.DS_Store
+
+# Xcode
+xcuserdata/
+
+# Swift Package Manager
+Package.resolved
+.swiftpm
+.build/
+
+# DocC build folder
+*.docc-build
