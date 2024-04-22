@@ -10,3 +10,6 @@ Package.resolved
 
 # DocC build folder
 *.docc-build
+
+# package-benchmark baselines
+.benchmarkBaselines
