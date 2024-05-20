@@ -29,6 +29,17 @@ let benchmarks = {
     }
   }
 
+  Benchmark("firstRange/small-text") { benchmark in
+    for _ in benchmark.scaledIterations {
+      var text = TestData.taggedDevanagari[...]
+      while !text.isEmpty {
+        let end = text.index(text.startIndex, offsetBy: 20, limitedBy: text.endIndex) ?? text.endIndex
+        blackHole(text[..<end].firstRange(of: "</data>\r\n<data>"))
+        text = text[end...]
+      }
+    }
+  }
+
   Benchmark("ranges/Devanagari") { benchmark in
     for _ in benchmark.scaledIterations {
       blackHole(TestData.taggedDevanagari.ranges(of: "खो"))
