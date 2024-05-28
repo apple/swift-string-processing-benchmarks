@@ -6,7 +6,6 @@ let commonSettings: [SwiftSetting] = [
 ]
 let commonDependencies: [Target.Dependency] = [
   .product(name: "Benchmark", package: "package-benchmark"),
-  .product(name: "_StringProcessing", package: "swift-experimental-string-processing"),
   "TestData",
 ]
 let commonPlugins: [Target.PluginUsage] = [
